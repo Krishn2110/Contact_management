@@ -3,6 +3,7 @@ import axios from "axios";
 import Navbar from "./components/Navbar";
 import ContactForm from "./components/ContactForm";
 import ContactList from "./components/ContactList";
+import Footer from "./components/Footer";
 
 const API = "http://localhost:5000/api/contacts";
 
@@ -33,6 +34,7 @@ export default function App() {
           </div>
         </div>
       </main>
+      <Footer/>
     </div>
   );
 }
