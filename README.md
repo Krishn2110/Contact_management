@@ -69,33 +69,31 @@ The project is fully deployed with a **React + Vite frontend on Vercel** and a *
 ## 📁 Project Structure
 
 contact-management/
-├── backend/
-│ ├── models/
-│ │ ├── User.js
-│ │ └── Contact.js
-│ ├── routes/
-│ │ ├── authRoutes.js
-│ │ └── contactRoutes.js
-│ ├── middleware/
-│ │ └── authMiddleware.js
-│ ├── server.js
-│ └── .env.example
+├── backend/                 # Node.js + Express API
+│   ├── models/              # Mongoose schemas (User, Contact)
+│   ├── routes/              # API route definitions
+│   ├── middleware/          # Auth & route protection
+│   ├── server.js            # App entry point
+│   └── .env.example         # Environment variables template
 │
-├── frontend/
-│ ├── src/
-│ │ ├── api/
-│ │ │ └── axios.js
-│ │ ├── components/
-│ │ ├── App.jsx
-│ │ ├── main.jsx
-│ │ └── index.css
-│ ├── vercel.json
-│ └── vite.config.js
+├── frontend/                # React + Vite application
+│   ├── src/
+│   │   ├── api/             # Centralized Axios instance
+│   │   ├── components/      # Reusable UI components
+│   │   ├── App.jsx          # App routes & layout
+│   │   ├── main.jsx         # React entry point
+│   │   └── index.css        # Tailwind styles
+│   │
+│   ├── public/              # Static assets
+│   ├── vite.config.js       # Vite configuration
+│   ├── vercel.json          # SPA routing config
+│   └── package.json
 │
 └── README.md
+
 
 ---
 
 ### Clone Repo
--git clone https://github.com/your-username/contact-management.git
--cd contact-management
+- git clone https://github.com/your-username/contact-management.git
+- cd contact-management
