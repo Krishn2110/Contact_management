@@ -9,7 +9,7 @@ export default function Home() {
       </div>
 
 
-      <h1 className="text-6xl md:text-7xl font-extrabold text-slate-900 tracking-tight mb-6">
+      <h1 className="text-5xl md:text-7xl font-extrabold text-slate-900 tracking-tight mb-6">
         The smarter way to <br />
         <span className="bg-clip-text text-transparent bg-linear-to-r from-indigo-600 to-violet-600">
           manage connections.
