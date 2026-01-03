@@ -1,7 +1,5 @@
 import { useState } from "react";
-import axios from "axios";
-
-const API = "http://localhost:5000/api/contacts";
+import api from "../api/axios";
 
 export default function ContactForm({ fetchContacts }) {
   const [form, setForm] = useState({
@@ -19,7 +17,12 @@ export default function ContactForm({ fetchContacts }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await axios.post(API, form);
+    await api.post('/contacts', form, {
+  headers: {
+    Authorization: `Bearer ${localStorage.getItem("token")}`,
+  },
+});
+
     setForm({ name: "", email: "", phone: "", message: "" });
     setSuccess("✅ Contact added successfully!");
     fetchContacts();

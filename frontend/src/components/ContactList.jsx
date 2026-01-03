@@ -1,14 +1,12 @@
 import { useState } from "react";
-import axios from "axios";
-
-const API = "http://localhost:5000/api/contacts";
+import api from "../api/axios";
 
 export default function ContactList({ contacts, fetchContacts }) {
   const [searchTerm, setSearchTerm] = useState("");
 
   const deleteContact = async (id) => {
     if (window.confirm("Are you sure you want to delete this contact?")) {
-      await axios.delete(`${API}/${id}`);
+      await api.delete(`/contacts/${id}`);
       fetchContacts();
     }
   };
